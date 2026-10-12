@@ -1,0 +1,47 @@
+[
+  {
+    "test_type": "unseen_dataset",
+    "held_out_groups": 4,
+    "independent_source_clusters_for_ci": 4,
+    "gain_over_probe_cluster_ci95": [
+      0.0026288459395124395,
+      0.017920624447974667
+    ],
+    "gain_over_probe_directionally_confirmed": true,
+    "law_macro_mae": 0.09357682630734833,
+    "baseline_macro_mae": 0.15696400663884674,
+    "probe_only_macro_mae": 0.10385156150109187,
+    "improvement_macro_mae": 0.06338718033149841,
+    "improvement_over_probe_mae": 0.010274735193743553
+  },
+  {
+    "test_type": "unseen_architecture",
+    "held_out_groups": 4,
+    "independent_source_clusters_for_ci": 4,
+    "gain_over_probe_cluster_ci95": [
+      -0.07968873054696168,
+      0.04118302027269828
+    ],
+    "gain_over_probe_directionally_confirmed": false,
+    "law_macro_mae": 0.1231044166382236,
+    "baseline_macro_mae": 0.17040159908927427,
+    "probe_only_macro_mae": 0.1038515615010919,
+    "improvement_macro_mae": 0.04729718245105068,
+    "improvement_over_probe_mae": -0.019252855137131705
+  },
+  {
+    "test_type": "unseen_both",
+    "held_out_groups": 16,
+    "independent_source_clusters_for_ci": 4,
+    "gain_over_probe_cluster_ci95": [
+      -0.01640716479673131,
+      -0.0007457375058058727
+    ],
+    "gain_over_probe_directionally_confirmed": false,
+    "law_macro_mae": 0.11242801265236047,
+    "baseline_macro_mae": 0.17130611030591436,
+    "probe_only_macro_mae": 0.10385156150109189,
+    "improvement_macro_mae": 0.05887809765355389,
+    "improvement_over_probe_mae": -0.008576451151268592
+  }
+]

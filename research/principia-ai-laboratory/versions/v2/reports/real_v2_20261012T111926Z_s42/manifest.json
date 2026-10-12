@@ -1,0 +1,20 @@
+{
+  "phase": "exploratory_development",
+  "seeds": 20,
+  "master_seed": 42,
+  "train_cap": 900,
+  "datasets": [
+    "breast_cancer",
+    "wine",
+    "iris",
+    "digits"
+  ],
+  "package_versions": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  },
+  "elapsed_seconds": 10.91,
+  "confirmatory_seed_count_met": true
+}

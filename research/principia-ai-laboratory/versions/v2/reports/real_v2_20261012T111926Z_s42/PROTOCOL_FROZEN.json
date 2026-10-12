@@ -1,0 +1,103 @@
+{
+  "version": "2.0.0",
+  "protocol_version_fixed_at_release": "2026-10-12",
+  "status": "exploratory_development; current code and thresholds are frozen for subsequent prospective replication only",
+  "development_datasets_already_inspected": [
+    "breast_cancer",
+    "wine",
+    "iris",
+    "digits"
+  ],
+  "primary_hypotheses": [
+    {
+      "id": "R01",
+      "name": "Nonlinear architecture exceeds linear classifier",
+      "a": [
+        "rbf",
+        "clean",
+        "iid"
+      ],
+      "b": [
+        "linear",
+        "clean",
+        "iid"
+      ],
+      "mde": 0.04
+    },
+    {
+      "id": "R02",
+      "name": "Clean labels exceed 20% corrupted labels",
+      "a": [
+        "linear",
+        "clean",
+        "iid"
+      ],
+      "b": [
+        "linear",
+        "label_noise",
+        "iid"
+      ],
+      "mde": 0.04
+    },
+    {
+      "id": "R03",
+      "name": "Full sensing exceeds 40% feature dropout",
+      "a": [
+        "linear",
+        "clean",
+        "iid"
+      ],
+      "b": [
+        "linear",
+        "sensor_dropout",
+        "iid"
+      ],
+      "mde": 0.04
+    },
+    {
+      "id": "R04",
+      "name": "Matched-environment evaluation exceeds domain-shift evaluation",
+      "a": [
+        "linear",
+        "clean",
+        "iid"
+      ],
+      "b": [
+        "linear",
+        "clean",
+        "ood"
+      ],
+      "mde": 0.04
+    }
+  ],
+  "alpha_family": 0.05,
+  "power": 0.8,
+  "sd_of_paired_seed_effect_assumed": 0.05,
+  "min_seeds": 20,
+  "split_test_fraction": 0.25,
+  "main_models": [
+    "prior",
+    "linear",
+    "tree",
+    "rbf"
+  ],
+  "interventions": [
+    "clean",
+    "label_noise",
+    "sensor_dropout"
+  ],
+  "intervention_settings": {
+    "label_flip_probability": 0.2,
+    "independent_feature_dropout_probability": 0.4
+  },
+  "forecasts": [
+    "unseen_dataset",
+    "unseen_architecture",
+    "unseen_both"
+  ],
+  "primary_metric": "accuracy",
+  "forecast_metric": "mean absolute accuracy error",
+  "default_train_cap": 900,
+  "decision_rule": "supported iff mean effect > MDE, Holm-adjusted one-sided p < 0.05 and dataset-cluster lower 95% CI > 0; otherwise not confirmed; opposite sign explicitly reported",
+  "limitations": "Seed repeats are NOT independent datasets. Dataset/feature-defined domains may be confounded. No exact Bayes ceiling for observational real data. A passing small-study result does not prove a universal AI law."
+}

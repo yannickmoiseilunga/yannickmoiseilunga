@@ -1,0 +1,182 @@
+[
+  {
+    "id": "H01",
+    "name": "No information: the blind engine cannot reliably exceed chance",
+    "status": "consistent (exploratory)",
+    "effect": -0.02611113333333333,
+    "bootstrap_95": [
+      -0.0377778,
+      -0.010000033333333325
+    ],
+    "threshold": 0.05,
+    "analysis": "Accuracy minus information-free chance baseline",
+    "n_seed_pairs": 6,
+    "kind": "bound",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H02",
+    "name": "Better observation improves sensor-based judgement",
+    "status": "consistent (exploratory)",
+    "effect": 0.1480555666666666,
+    "bootstrap_95": [
+      0.12944444999999996,
+      0.16333333333333327
+    ],
+    "threshold": 0.03,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H03",
+    "name": "Composition allows parity relations inaccessible to linear separators",
+    "status": "consistent (exploratory)",
+    "effect": 0.45305555,
+    "bootstrap_95": [
+      0.3777777666666666,
+      0.5486111166666666
+    ],
+    "threshold": 0.1,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H04",
+    "name": "A changed environment can disturb a successful disposition",
+    "status": "consistent (exploratory)",
+    "effect": 0.8597222333333333,
+    "bootstrap_95": [
+      0.8538889,
+      0.86583335
+    ],
+    "threshold": 0.1,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H05",
+    "name": "An inverted reward misaligns correction with truth",
+    "status": "consistent (exploratory)",
+    "effect": 0.8566666666666667,
+    "bootstrap_95": [
+      0.8405555333333333,
+      0.8705555333333334
+    ],
+    "threshold": 0.25,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H06",
+    "name": "Corrected labels outperform corrupted corrections",
+    "status": "consistent (exploratory)",
+    "effect": 0.04835635,
+    "bootstrap_95": [
+      0.0419952,
+      0.05471891666666665
+    ],
+    "threshold": 0.012,
+    "analysis": "Brier loss(B corrupted) minus Brier loss(A clean); positive means clean correction better",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H07",
+    "name": "An additional instrument can improve decisions",
+    "status": "consistent (exploratory)",
+    "effect": 0.18133333333333337,
+    "bootstrap_95": [
+      0.17,
+      0.19333333333333336
+    ],
+    "threshold": 0.025,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H08",
+    "name": "Independent reference memory can resolve otherwise hidden identities",
+    "status": "consistent (exploratory)",
+    "effect": 0.45433333333333337,
+    "bootstrap_95": [
+      0.4296666666666667,
+      0.48433333333333334
+    ],
+    "threshold": 0.2,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H09",
+    "name": "Process verification at larger search budgets can beat first attempt",
+    "status": "consistent (exploratory)",
+    "effect": 0.38466666666666666,
+    "bootstrap_95": [
+      0.3753333333333333,
+      0.39399999999999996
+    ],
+    "threshold": 0.05,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "falsifiable",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H10",
+    "name": "Weak supervision may or may not elicit stronger learned structure",
+    "status": "inconclusive",
+    "effect": 0.0,
+    "bootstrap_95": [
+      0.0,
+      0.0
+    ],
+    "threshold": 0.0,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "exploratory",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H11",
+    "name": "Selecting high-confidence predictions can reduce accepted error",
+    "status": "consistent (exploratory)",
+    "effect": 0.04895833333333336,
+    "bootstrap_95": [
+      0.03166663333333338,
+      0.06694443333333334
+    ],
+    "threshold": 0.015,
+    "analysis": "Reduction in error among most-confident 80% versus all predictions",
+    "n_seed_pairs": 6,
+    "kind": "exploratory",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  },
+  {
+    "id": "H12",
+    "name": "Feedback after acting can improve control over a one-shot decision",
+    "status": "consistent (exploratory)",
+    "effect": 0.19033333333333327,
+    "bootstrap_95": [
+      0.18133333333333326,
+      0.19833333333333328
+    ],
+    "threshold": 0.04,
+    "analysis": "Accuracy(A) minus Accuracy(B), paired by random seed",
+    "n_seed_pairs": 6,
+    "kind": "exploratory",
+    "caveat": "Seed bootstrap; intervals do not cover sampling/design/benchmark uncertainty."
+  }
+]

@@ -1,0 +1,23 @@
+name: Principia three-version regression tests
+on:
+  push:
+    paths: ['research/principia-ai-laboratory/**']
+  pull_request:
+    paths: ['research/principia-ai-laboratory/**']
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: [v1, v2, v3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Standard library tests
+        run: |
+          cd research/principia-ai-laboratory/versions/${{ matrix.version }}
+          if [ -f requirements-research.txt ]; then python -m pip install -r requirements-research.txt; fi
+          python -m unittest discover -s tests

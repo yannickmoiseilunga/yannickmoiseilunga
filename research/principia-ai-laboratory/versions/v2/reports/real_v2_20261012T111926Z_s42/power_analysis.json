@@ -1,0 +1,11 @@
+{
+  "assumed_sd": 0.05,
+  "minimum_detectable_effect": 0.04,
+  "alpha_family": 0.05,
+  "alpha_per_comparison": 0.0125,
+  "target_power": 0.8,
+  "comparison_count": 4,
+  "normal_approx_seeds": 15,
+  "chosen_seeds": 20,
+  "interpretation": "Planning calculation for FUTURE independent studies. Development runs inspected the four bundled datasets, so their results must not be relabelled as preregistered confirmation. Estimated SD is an assumption."
+}

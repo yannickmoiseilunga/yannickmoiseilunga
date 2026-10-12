@@ -1,0 +1,6 @@
+# V2 empirical suite: ordinary CPU-friendly packages. No GPU or TPU required.
+numpy>=1.26,<3
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+# Needed only when requesting additional OpenML public datasets
+pandas>=2.0,<3

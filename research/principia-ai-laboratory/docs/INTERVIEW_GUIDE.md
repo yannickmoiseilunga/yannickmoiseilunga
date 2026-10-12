@@ -1,23 +1,30 @@
-# Interview guide — explaining the research to different audiences
+# Interview guide: tell the scientific story in 2 minutes
 
-## Lay explanation
-We asked whether you can predict how accurately a learning machine will do at a new task **before seeing its answers**. A simple mathematical rule should be tested on cases it did not learn from. V1 tested the principle with synthetic worlds; V2 tested more realistic data and found failure on unseen architectures; V3 changed the equation to work in error odds and produced modest average improvements. The gains did not survive the demanding confirmation rule, and those failures are retained.
+## Plain-English account
 
-## Two-minute technical explanation
-We framed transfer forecasting as a conditional statistical prediction. The learner's architecture and *training-only* cross-validation accuracy form a probe, while descriptions of sensing, corrections and measured distributional shift form covariates. The V2 additive correction was brittle on architecture holdouts. V3 instead models **logit(target error) = logit(probe error) + λ·βᵀφ**, with trained coefficients carried from development sources to distinct holdouts. We compare mean absolute forecasting error against probe-only and V2 baselines, aggregate uncertainty across source families, and preserve negative results. No model can reliably predict arbitrary concept shift when input observations are identical but true labels differ.
+> I built a sequence of experimental AI research systems inspired by Newton's idea of moving from definitions to falsifiable mathematical propositions. The research question was whether a model could predict how other learners perform on previously unseen datasets and architectures. The synthetic first version tested basic mechanisms; the second tested whether predictions transferred to real datasets and revealed architecture-transfer failures; the third introduced an odds-based predictive relationship and achieved smaller average errors in several transfer tests, but **failed the statistical confirmation criteria**. That honest negative result is important: it distinguishes an interesting empirical model from a universal law.
 
-## What an experienced interviewer might challenge
+## Technical account
 
-**Novelty?** A falsifiable, versioned research engineering programme; not discovery of the logistic function, information inequality or Newtonian dynamics in AI.
+1. **Observable state:** architecture descriptors, training-only cross-validation probe, known correction/sensing interventions, unlabeled shift descriptors.
+2. **Model:** Version 2 additive accuracy adjustment; Version 3 `logit(R_Q)=logit(R_probe)+λβᵀφ`, with a source-only fitted correction and bounded predicted accuracy.
+3. **Evaluation:** dataset/architecture/double holdouts, seed repetition, dataset-family clustering, prospective effects and Holm corrections; no test labels admitted to predictor fitting.
+4. **Baselines:** constant mean, probe-only, previous candidate; evaluate MAE, source-level uncertainty, failure subgroups and theory-limit violations.
+5. **Failure mode:** unseen architecture advantage does not robustly transfer; small family count means broad intervals; unlabelled covariates cannot reveal arbitrary P(Y|X) changes.
+6. **Decision:** claim an exploratory conditional predictor and an impossibility bound, not a discovered universal law.
 
-**Leakage?** Source-only coefficient fitting and training-only probes; target test labels excluded. Earlier observed V2 sources are explicitly development material.
+## Likely senior researcher questions
 
-**Why 20 seeds?** To reduce randomness within conditions. They are not 20 independent data-generating worlds; three or four held-out source families still give wide uncertainty.
+**Q: What is novel?** A versioned, falsification-first experimental workbench joining classical scientific derivation, exact indistinguishability arguments, held-out transfer forecasting and negative-results reporting. The information bound and log-odds relation are **not** new mathematical theorems; the candidate combination and study design are experimental.
 
-**How was superiority decided?** A predefined minimum error improvement and source-level interval excluding zero. V3 did not pass.
+**Q: Why not simply use more training seeds?** Seeds reduce Monte Carlo variability, not between-domain epistemic uncertainty. The effective replication unit for universal transfer is the independent source family.
 
-**Where did it fail?** V2 failed unseen architectures and combined holdouts. V3 worsened certain source-specific predictions including ANES96, Digits and RANDHIE.
+**Q: What prevents leakage?** Training-only probes, source-domain fitting, explicit target holdouts and retained provenance. But earlier benchmark development exposure means the bundle is exploratory; preregistration for future studies is not retroactive.
 
-**Main unresolved limitation?** Unobserved changes in P(Y|X) cannot be deduced from unlabeled X alone. Training-probe accuracy is not zero-shot architecture prediction.
+**Q: Why forecast rather than classify directly?** Forecasting learner performance before observing the new test labels is a more discriminating test of general theories of learning and transfer.
 
-**Further work?** Freeze software and coefficients, gather many independent naturally separated source domains, perform a prospective power calculation at *domain level*, release all predictions, and seek independent replication.
+**Q: What is the weakest assumption?** That observable shift proxies and train-only probe performance sufficiently summarise how target correctness changes. Concept drift can falsify that assumption even when input distributions agree.
+
+**Q: What is next?** Pre-register new independent source families, predict them before unsealing labels, calibrate interval coverage across sources, and compare with robust simpler baselines.
+
+**Q: Did this use a frontier LLM?** Not in the reported tabular-transfer study. Optional Ollama adapter is a separate track; no actual language-model run is presented as completed evidence.

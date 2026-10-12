@@ -1,0 +1,46 @@
+{
+  "breast_cancer": {
+    "sha256_values": "25e2eb7b7a8745b1bde5ba18bc4969983d2e2f403291ecd5bde4a29ef30c3859",
+    "samples": 569,
+    "features": 30,
+    "class_balance": 0.6274165202108963,
+    "modality": "tabular",
+    "source": "scikit-learn Wisconsin Diagnostic Breast Cancer",
+    "domain_feature": 1,
+    "domain_definition": "median of mean texture (original feature 1)",
+    "source_url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html"
+  },
+  "wine": {
+    "sha256_values": "0a32a4ceabde1e86a3682858bedd542b488f02d79d4622d23ea89e8a6d409bb4",
+    "samples": 178,
+    "features": 13,
+    "class_balance": 0.33146067415730335,
+    "modality": "tabular",
+    "source": "UCI Wine chemical analysis via scikit-learn",
+    "domain_feature": 2,
+    "domain_definition": "median ash content (original feature 2)",
+    "source_url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html"
+  },
+  "iris": {
+    "sha256_values": "464cab2ee2526a22649e0e1a576e7bd62b452fbc858a85e216448e84cf439fb2",
+    "samples": 150,
+    "features": 4,
+    "class_balance": 0.3333333333333333,
+    "modality": "tabular",
+    "source": "Fisher iris measurements via scikit-learn",
+    "domain_feature": 1,
+    "domain_definition": "median sepal width (original feature 1)",
+    "source_url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html"
+  },
+  "digits": {
+    "sha256_values": "e3f667860d71c94693aaeed79742ad45e78198bf05fae29730374180c1f613e0",
+    "samples": 1797,
+    "features": 64,
+    "class_balance": 0.4958263772954925,
+    "modality": "image_as_pixels",
+    "source": "UCI optical handwritten digits via scikit-learn",
+    "domain_feature": "ink",
+    "domain_definition": "median total ink intensity of 8x8 image",
+    "source_url": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html"
+  }
+}

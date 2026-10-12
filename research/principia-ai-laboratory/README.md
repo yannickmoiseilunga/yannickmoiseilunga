@@ -1,43 +1,64 @@
-# Principia AI Laboratory: An experimental search for transferable laws of machine learning
+# Principia AI Laboratory — A Falsifiable Research Programme (V1 → V3)
 
-**Research status: exploratory; no universal law proven.** Three evolving versions inspired by Newton's method of definitions, propositions, experiments, counterexamples and revision. These are **not** Newton's actual laws of intelligence.
+> **Research status:** exploratory, computationally reproduced on the enclosed configurations; **no universal law of AI is claimed or confirmed**.
 
-## Read this first (2 minutes)
+**Research question:** Can we forecast a learning system's accuracy when its **data source, architecture, or both** have not previously been observed? Can a law capture *distinguishability of observations*, *ability to transform learned relations*, and *fidelity of correction*?
 
-Can a mathematical relationship forecast how a trained learner will perform when its data, architecture, or both are new? We tested the claim, found failures, and changed the candidate law instead of removing adverse outcomes.
+The project takes a historical cue from Newton's *Principia Mathematica*: definitions → falsifiable propositions → analytical limits → experiments → adverse findings → revised candidate laws. Newton's mechanical laws are **not** asserted to hold for AI.
 
-| Version | Investigation | Central finding |
-|---|---|---|
-| [V1 – Synthetic Mechanisms](versions/v1/README.md) | 12 controlled hypotheses on information, composition, correction and feedback | 11 were consistent on toy worlds, 1 inconclusive; initial forecasts sometimes violated Bayes accuracy ceilings |
-| [V2 – Real-Data Replication](versions/v2/README.md) | 20 seeds, 4 publicly distributed datasets, source/architecture holdouts | Improved over probe on held-out dataset but failed on held-out architectures |
-| [V3 – Information–Transport Law](versions/v3/README.md) | Conditional error-log-odds model, new survey sources and architectures | Lower average error on some held-outs, but **none passed confirmation threshold** |
+## In 60 seconds (plain English)
 
-### Headline predictive results
-**Mean absolute error (MAE); lower is better.** V2 and V3 are different studies, **not directly matched benchmark scores**.
+Imagine learning to identify objects from a familiar collection of examples. How well will you do when both the objects and the method you use to identify them change? A good scientific model would **forecast how performance changes**, not merely explain past successes. These three versions try increasingly demanding predictions. They deliberately keep their failures.
 
-| Version | Evaluation | Candidate MAE | Probe-only MAE | Result |
+- **V1 — What makes an artificial learner succeed or fail?** Twelve controlled synthetic comparisons assess evidence, compositional reasoning, corrections, memory and environmental change. Eleven were consistent with their toy hypotheses; one was inconclusive. Its forecast sometimes violated known Bayes ceilings.
+- **V2 — Does that transfer to measured data and unfamiliar learners?** Four independent tabular/image datasets, four learning architectures and 20 random seeds produced 1,920 records. The correction helped with unseen datasets but worsened forecasts for unseen architectures and combined holdouts.
+- **V3 — Can a more constrained mathematical law improve transfer?** A conditional law transforms *error odds* rather than directly adding accuracy. On exploratory held-out surveys and learners, its average forecast errors were slightly smaller, but **all three primary comparisons failed the confirmation criterion**. An indistinguishable-world demonstration establishes a genuine impossibility limit for unconstrained universal point forecasts.
+
+## Evidence-first result comparison
+
+Mean absolute forecast error (MAE), **smaller is better**. **V2 and V3 use different experimental source suites: do not treat these numbers as a matched head-to-head competition.**
+
+| Experimental programme | Test | Candidate MAE | Probe-only MAE | Interpretation |
 |---|---|---:|---:|---|
-| V2 | New dataset | 0.0936 | 0.1039 | Development-stage improvement |
-| V2 | New architecture | 0.1231 | **0.1039** | Negative finding |
-| V2 | Both unseen | 0.1124 | **0.1039** | Negative finding |
-| V3 | New dataset | **0.0573** | 0.0669 | Mean gain; not confirmed |
-| V3 | New architecture | **0.0693** | 0.0711 | Mean gain; not confirmed |
-| V3 | Both unseen | **0.0576** | 0.0613 | Mean gain; not confirmed |
+| V1 synthetic | Condition-out | 0.2340 (0.1950 Bayes-constrained) | 0.2639 training-mean (not a probe) | Exploratory toy-world evidence; 54 unconstrained Bayes-ceiling violations |
+| V2 measured | Unseen dataset | 0.0936 | 0.1039 | Improvement on development-observed datasets |
+| V2 measured | Unseen architecture | 0.1231 | 0.1039 | Candidate worse than probe |
+| V2 measured | Both unseen | 0.1124 | 0.1039 | Candidate worse than probe |
+| V3 transfer | New datasets | 0.0573 | 0.0669 | Gain; not statistically confirmed |
+| V3 transfer | New architecture | 0.0693 | 0.0711 | Small gain; not confirmed |
+| V3 transfer | Both unseen | 0.0576 | 0.0613 | Gain; not confirmed |
 
-V3 confirmation demanded >=0.010 absolute MAE gain **and** a positive lower bound of the source-cluster confidence interval. All three tests failed this gate.
+**Important:** Counts of random-seed runs are not counts of independent domains. The named survey sources are small in number. Artificially constructed shifts cannot substitute for genuine future hospitals, factories, dates or geographies.
 
-### Interviewer navigation
-- [Plain-English and technical interview briefing](docs/INTERVIEW_GUIDE.md)
-- [Reproducible research findings and limitations](docs/EVIDENCE_AND_FINDINGS.md)
-- [Reproducibility and source-code publication status](docs/REPRODUCE.md)
-- [Mathematical derivation](versions/v3/V3_MATHEMATICAL_DERIVATION.md)
-- [Future independent replication protocol](versions/v3/NEXT_REPLICATION_PLAN.md)
-- [Published raw V2 development records (CSV)](versions/v3/frozen_development_v2.csv) and [evidence inventory](docs/RAW_EVIDENCE_README.md)
-- [V1 experimental report](versions/v1/reports/20261012T103053Z_standard_s42/REPORT.md)
-- [V2 empirical report](versions/v2/reports/real_v2_20261012T111926Z_s42/REPORT.md)
-- [V3 empirical report](versions/v3/reports/transport_v3_20261012T121322Z/REPORT.md)
+## Project navigation
 
-### Publication scope
-This initial GitHub publication contains source methodology, protocol descriptions, result summaries, and the frozen V2 development observations (1,920 records). **The full executable source trees and raw prediction CSV/JSON evidence are staged in a separate local publication bundle and require the repository sync step**; no such files should be assumed to exist on GitHub until uploaded and verified. Tests in that package have passed (11 V1, 20 V2, 30 V3), but that is not third-party scientific validation.
+| Stage | Executable code | Results | What changed |
+|---|---|---|---|
+| [V1 — Foundations](versions/v1/README.md) | [`versions/v1/principia`](versions/v1/principia) | [`versions/v1/reports`](versions/v1/reports) | Information ceilings, 12 synthetic hypotheses, first forecasts |
+| [V2 — Replication](versions/v2/README.md) | [`versions/v2/principia`](versions/v2/principia) | [`versions/v2/reports`](versions/v2/reports) | 20 seeds, empirical datasets, uncertainty and holdouts |
+| [V3 — Information–Transport](versions/v3/README.md) | [`versions/v3/principia/transport_law.py`](versions/v3/principia/transport_law.py) | [`versions/v3/reports`](versions/v3/reports) | Log-odds error transport, frozen earlier fit, adversarial impossibility witness |
 
-The work was developed iteratively with AI assistance. It does not claim peer review, architecture-independent emergence, consciousness or a universal intelligence theorem.
+## Documentation for evaluators
+
+- [Research design, checks and all negative findings](docs/EVIDENCE_AND_FINDINGS.md)
+- [Two-minute interview account and technical questions](docs/INTERVIEW_GUIDE.md)
+- [Exact reproduction and environment notes](docs/REPRODUCE.md)
+- [Scientific claims, caveats, and independent confirmation gate](docs/RESEARCH_INTEGRITY.md)
+- [Version 3 derivation](versions/v3/V3_MATHEMATICAL_DERIVATION.md)
+- [Future independent replication plan](versions/v3/NEXT_REPLICATION_PLAN.md)
+- [File-integrity hashes](MANIFEST_SHA256.txt)
+
+## Running
+
+The baseline synthetic programme needs only Python 3.10+. Empirical and predictive transfer experiments need the optional dependencies given in each version's `requirements-research.txt`.
+
+For Windows, enter a version folder and execute `install_research.bat` (V2/V3 only), followed by `run.bat`. The browser dashboard uses an available local port. For reproducible command-line runs, see [docs/REPRODUCE.md](docs/REPRODUCE.md).
+
+## Independence, integrity and licensing
+
+This research was developed iteratively with AI assistance. Public datasets and third-party research remain credited in each version's `SOURCES.md`. Included records are from the documented study executions, not independent external peer replication. No paper acceptance, third-party verification, fully external preregistration, universal validity, causal mechanism, or consciousness claim is made. **No explicit open-source licence is assigned; see the repository owner before reuse.**
+
+
+## Publishing on Windows (fixed)
+
+Use `publish_to_github.bat` from the extracted folder. It invokes `publish_to_github.ps1` directly, detects/installs Git for Windows on request and pauses to show errors. See [`PUBLISHING_ON_WINDOWS.md`](PUBLISHING_ON_WINDOWS.md). Do **not** run `publish_to_github.sh` via a broken WSL launcher.

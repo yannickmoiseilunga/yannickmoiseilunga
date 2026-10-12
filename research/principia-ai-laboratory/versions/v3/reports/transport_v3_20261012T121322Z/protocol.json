@@ -1,0 +1,45 @@
+{
+  "version": "3.0.0",
+  "candidate": "Information-Transport Log-Odds Law (ITL)",
+  "origin": "four already-inspected v2 development datasets; no v3 data used in fitting",
+  "evaluation_sources": [
+    "anes96",
+    "randhie",
+    "fair"
+  ],
+  "evaluation_architectures": [
+    "gnb",
+    "knn"
+  ],
+  "primary": "MAE gain over train-only probe, macro by independent dataset",
+  "secondary": "MAE gain over V2 residual Ridge; shift-conditional coverage",
+  "success_threshold_mae_gain": 0.01,
+  "min_seeds": 20,
+  "alpha": 0.05,
+  "bootstrap_interval_percentiles": [
+    0.025,
+    0.975
+  ],
+  "model_features": [
+    "constant",
+    "shift",
+    "shift_square",
+    "shift_x_probe_confidence",
+    "info_gap",
+    "probe_brier",
+    "label_loss",
+    "sensor_loss",
+    "log_sample_efficiency"
+  ],
+  "ridge_alpha": 50.0,
+  "coefficient_shrinkage": 0.35,
+  "v2_reference": "train-only probe + nested shrinkage Ridge correction",
+  "test_regimes": [
+    "unseen_dataset",
+    "unseen_architecture",
+    "unseen_both"
+  ],
+  "external_domain_note": "ANES96 population median and Fair marriage duration median are feature-derived; RANDHIE idp group is a real observed regime, but is not independently collected site/time. Not WILDS or DomainBed.",
+  "interpretation": "Exploratory external sample: datasets selected by author before inspecting results, but no public timestamped preregistration and the architecture/model may be revised afterwards. Independent replications remain needed.",
+  "unknown_concept_shift": "Impossible to bound without assumptions/label access. Empirical uncertainty bands are descriptive and NOT distribution-free validity guarantees."
+}

@@ -1,0 +1,10 @@
+{
+  "mae": 0.23398460328341622,
+  "constrained_mae": 0.19500869228961568,
+  "baseline_mae": 0.26393045219717065,
+  "n_conditions": 12,
+  "n_predictions": 180,
+  "above_bayes_ceiling_predictions": 54,
+  "interpretation": "Leave-one-experiment-condition-out forecast. A failed forecast is a failed candidate model, not a falsification of information theory.",
+  "limitation": "Scenario metadata and synthetic Bayes ceilings are given to the predictor; heldout real worlds require a new design."
+}

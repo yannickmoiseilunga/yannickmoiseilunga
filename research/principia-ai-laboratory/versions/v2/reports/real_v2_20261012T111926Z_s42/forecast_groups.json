@@ -1,0 +1,482 @@
+[
+  {
+    "test_type": "unseen_dataset",
+    "held_dataset": "breast_cancer",
+    "held_architecture": null,
+    "n_evaluations": 480,
+    "correction_weight": 0.1,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.09848331135287298,
+        "0.1": 0.0977017544006989,
+        "0.25": 0.09893973224263809,
+        "0.5": 0.1056326822516741,
+        "1.0": 0.12175421843303759
+      }
+    },
+    "law_mae": 0.11306777391529782,
+    "baseline_mae": 0.1525640390177127,
+    "probe_only_mae": 0.11995631194574854
+  },
+  {
+    "test_type": "unseen_dataset",
+    "held_dataset": "digits",
+    "held_architecture": null,
+    "n_evaluations": 480,
+    "correction_weight": 0.5,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.12427432838406853,
+        "0.1": 0.12056170103457604,
+        "0.25": 0.11703921835899045,
+        "0.5": 0.11537818175662691,
+        "1.0": 0.12734089196237927
+      }
+    },
+    "law_mae": 0.03431079348024639,
+    "baseline_mae": 0.12549012300807394,
+    "probe_only_mae": 0.04258326085216192
+  },
+  {
+    "test_type": "unseen_dataset",
+    "held_dataset": "iris",
+    "held_architecture": null,
+    "n_evaluations": 480,
+    "correction_weight": 0.5,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.08152076966910839,
+        "0.1": 0.07805171415442923,
+        "0.25": 0.07400246800269594,
+        "0.5": 0.07068234619677534,
+        "1.0": 0.08161580900187404
+      }
+    },
+    "law_mae": 0.15344371591429523,
+    "baseline_mae": 0.2260781323923703,
+    "probe_only_mae": 0.17084393699704237
+  },
+  {
+    "test_type": "unseen_dataset",
+    "held_dataset": "wine",
+    "held_architecture": null,
+    "n_evaluations": 480,
+    "correction_weight": 0.25,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.11112783659831761,
+        "0.1": 0.10619791126028917,
+        "0.25": 0.10135408646807224,
+        "0.5": 0.10209276060315887,
+        "1.0": 0.12003264877140364
+      }
+    },
+    "law_mae": 0.07348502191955385,
+    "baseline_mae": 0.12372373213723001,
+    "probe_only_mae": 0.08202273620941467
+  },
+  {
+    "test_type": "unseen_architecture",
+    "held_dataset": null,
+    "held_architecture": "linear",
+    "n_evaluations": 480,
+    "correction_weight": 0.0,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.11634962727376268,
+        "0.1": 0.11975760277012044,
+        "0.25": 0.1294680225001588,
+        "0.5": 0.15211597910190855,
+        "1.0": 0.1993462706265913
+      }
+    },
+    "law_mae": 0.06635736418307951,
+    "baseline_mae": 0.16809744395107065,
+    "probe_only_mae": 0.06635736418307951
+  },
+  {
+    "test_type": "unseen_architecture",
+    "held_dataset": null,
+    "held_architecture": "prior",
+    "n_evaluations": 480,
+    "correction_weight": 0.5,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.08498948071198058,
+        "0.1": 0.08262348845889843,
+        "0.25": 0.08002448397958288,
+        "0.5": 0.07940686345603955,
+        "1.0": 0.08926818084938598
+      }
+    },
+    "law_mae": 0.2366322757853077,
+    "baseline_mae": 0.23765267952086505,
+    "probe_only_mae": 0.16043780386842582
+  },
+  {
+    "test_type": "unseen_architecture",
+    "held_dataset": null,
+    "held_architecture": "rbf",
+    "n_evaluations": 480,
+    "correction_weight": 0.25,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.09985666321948865,
+        "0.1": 0.09847612334618373,
+        "0.25": 0.0980540471613476,
+        "0.5": 0.10135239813148011,
+        "1.0": 0.1193659933755063
+      }
+    },
+    "law_mae": 0.11772364911110605,
+    "baseline_mae": 0.15225052310433979,
+    "probe_only_mae": 0.11583625634590164
+  },
+  {
+    "test_type": "unseen_architecture",
+    "held_dataset": null,
+    "held_architecture": "tree",
+    "n_evaluations": 480,
+    "correction_weight": 0.1,
+    "inner_selection": {
+      "inner_group_count": 3,
+      "inner_loss_by_weight": {
+        "0.0": 0.11421047479913567,
+        "0.1": 0.11314312224888264,
+        "0.25": 0.11572191690936602,
+        "0.5": 0.12725617538889,
+        "1.0": 0.15614172804634943
+      }
+    },
+    "law_mae": 0.0717043774734011,
+    "baseline_mae": 0.1236057497808216,
+    "probe_only_mae": 0.07277482160696058
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "breast_cancer",
+    "held_architecture": "linear",
+    "n_evaluations": 120,
+    "correction_weight": 0.0,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.10718990614998183,
+        "0.1": 0.11353128666775225,
+        "0.25": 0.13169781165906352,
+        "0.5": 0.15962246513229275,
+        "1.0": 0.20502754747344376
+      }
+    },
+    "law_mae": 0.048338875847678674,
+    "baseline_mae": 0.16373678187942825,
+    "probe_only_mae": 0.048338875847678674
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "breast_cancer",
+    "held_architecture": "prior",
+    "n_evaluations": 120,
+    "correction_weight": 0.1,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.08400121800836963,
+        "0.1": 0.08309807014310797,
+        "0.25": 0.08586875661586524,
+        "0.5": 0.09455670248563561,
+        "1.0": 0.10730747226746382
+      }
+    },
+    "law_mae": 0.22700202048393195,
+    "baseline_mae": 0.2089201877934273,
+    "probe_only_mae": 0.21596244131455392
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "breast_cancer",
+    "held_architecture": "rbf",
+    "n_evaluations": 120,
+    "correction_weight": 0.1,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.09654043098018412,
+        "0.1": 0.09645172790851887,
+        "0.25": 0.10181643464849371,
+        "0.5": 0.11366316493034673,
+        "1.0": 0.13160288857172578
+      }
+    },
+    "law_mae": 0.14951499070094318,
+    "baseline_mae": 0.14606902403013428,
+    "probe_only_mae": 0.1504091679707877
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "breast_cancer",
+    "held_architecture": "tree",
+    "n_evaluations": 120,
+    "correction_weight": 0.0,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.1062016902729564,
+        "0.1": 0.11496416881540211,
+        "0.25": 0.13472609759712423,
+        "0.5": 0.16193488081337504,
+        "1.0": 0.19820015181739345
+      }
+    },
+    "law_mae": 0.06511476264997391,
+    "baseline_mae": 0.13557366232216997,
+    "probe_only_mae": 0.06511476264997391
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "digits",
+    "held_architecture": "linear",
+    "n_evaluations": 120,
+    "correction_weight": 0.0,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.13957515841138077,
+        "0.1": 0.1445869764635374,
+        "0.25": 0.15749086370200327,
+        "0.5": 0.18226871547232787,
+        "1.0": 0.21630185457896453
+      }
+    },
+    "law_mae": 0.030313941825922307,
+    "baseline_mae": 0.08471862135121645,
+    "probe_only_mae": 0.030313941825922307
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "digits",
+    "held_architecture": "prior",
+    "n_evaluations": 120,
+    "correction_weight": 0.25,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.09982554200443942,
+        "0.1": 0.09861489096893271,
+        "0.25": 0.0983967565413764,
+        "0.5": 0.10112157613220628,
+        "1.0": 0.11124498378255243
+      }
+    },
+    "law_mae": 0.10461111023415529,
+    "baseline_mae": 0.3315701184580064,
+    "probe_only_mae": 0.04888915290483546
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "digits",
+    "held_architecture": "rbf",
+    "n_evaluations": 120,
+    "correction_weight": 0.1,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.12001500098538916,
+        "0.1": 0.11878168895541376,
+        "0.25": 0.11979223028882727,
+        "0.5": 0.124511106490642,
+        "1.0": 0.14091100541159685
+      }
+    },
+    "law_mae": 0.05482887988965111,
+    "baseline_mae": 0.10013471514012713,
+    "probe_only_mae": 0.052188093643286505
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "digits",
+    "held_architecture": "tree",
+    "n_evaluations": 120,
+    "correction_weight": 0.0,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.13768161213506483,
+        "0.1": 0.14061869690815706,
+        "0.25": 0.14908035762515073,
+        "0.5": 0.1623670090431291,
+        "1.0": 0.1758930049795303
+      }
+    },
+    "law_mae": 0.03894185503460339,
+    "baseline_mae": 0.06273273234331601,
+    "probe_only_mae": 0.03894185503460339
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "iris",
+    "held_architecture": "linear",
+    "n_evaluations": 120,
+    "correction_weight": 0.0,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.09221710693909652,
+        "0.1": 0.09335422552551448,
+        "0.25": 0.09812963840196678,
+        "0.5": 0.11298716876939802,
+        "1.0": 0.15006868852648783
+      }
+    },
+    "law_mae": 0.11713418315488608,
+    "baseline_mae": 0.25844375130491837,
+    "probe_only_mae": 0.11713418315488608
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "iris",
+    "held_architecture": "prior",
+    "n_evaluations": 120,
+    "correction_weight": 0.5,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.0669235343063828,
+        "0.1": 0.06516820990675569,
+        "0.25": 0.0632094541662921,
+        "0.5": 0.06226569013461255,
+        "1.0": 0.06879630975686724
+      }
+    },
+    "law_mae": 0.3008619585347417,
+    "baseline_mae": 0.265813788201848,
+    "probe_only_mae": 0.26581378820184776
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "iris",
+    "held_architecture": "rbf",
+    "n_evaluations": 120,
+    "correction_weight": 0.25,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.07845626863735572,
+        "0.1": 0.07753244309991364,
+        "0.25": 0.07704009421757806,
+        "0.5": 0.07907487372896355,
+        "1.0": 0.09203663323199957
+      }
+    },
+    "law_mae": 0.18655605411737503,
+    "baseline_mae": 0.2323378105522154,
+    "probe_only_mae": 0.19120220709050748
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "iris",
+    "held_architecture": "tree",
+    "n_evaluations": 120,
+    "correction_weight": 0.1,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.0884861687935985,
+        "0.1": 0.08726957668762889,
+        "0.25": 0.08801874828002612,
+        "0.5": 0.09595814875129947,
+        "1.0": 0.1210433224267836
+      }
+    },
+    "law_mae": 0.11322141104535839,
+    "baseline_mae": 0.18176508761961252,
+    "probe_only_mae": 0.10922556954092823
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "wine",
+    "held_architecture": "linear",
+    "n_evaluations": 120,
+    "correction_weight": 0.0,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.12641633759459162,
+        "0.1": 0.13069380094478322,
+        "0.25": 0.14176024479648655,
+        "0.5": 0.1675851510239435,
+        "1.0": 0.22042043673139602
+      }
+    },
+    "law_mae": 0.06964245590383103,
+    "baseline_mae": 0.15723982247198945,
+    "probe_only_mae": 0.06964245590383103
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "wine",
+    "held_architecture": "prior",
+    "n_evaluations": 120,
+    "correction_weight": 0.25,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.08920762852873047,
+        "0.1": 0.08713181384587326,
+        "0.25": 0.08589622234548996,
+        "0.5": 0.08917455019799278,
+        "1.0": 0.10715053137500574
+      }
+    },
+    "law_mae": 0.14847435506658077,
+    "baseline_mae": 0.15043601584327765,
+    "probe_only_mae": 0.11108583305246601
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "wine",
+    "held_architecture": "rbf",
+    "n_evaluations": 120,
+    "correction_weight": 0.25,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.10441495227502554,
+        "0.1": 0.10230107009665325,
+        "0.25": 0.10130353720011594,
+        "0.5": 0.10537827295177285,
+        "1.0": 0.12282278546089831
+      }
+    },
+    "law_mae": 0.0663765648686097,
+    "baseline_mae": 0.14414036039373226,
+    "probe_only_mae": 0.06954555667902484
+  },
+  {
+    "test_type": "unseen_both",
+    "held_dataset": "wine",
+    "held_architecture": "tree",
+    "n_evaluations": 120,
+    "correction_weight": 0.1,
+    "inner_selection": {
+      "inner_group_count": 9,
+      "inner_loss_by_weight": {
+        "0.0": 0.12447242799492288,
+        "0.1": 0.12175423568325387,
+        "0.25": 0.12221532714252742,
+        "0.5": 0.12921461517960486,
+        "1.0": 0.15441504378869078
+      }
+    },
+    "law_mae": 0.07791478307952511,
+    "baseline_mae": 0.11726528518921044,
+    "probe_only_mae": 0.07781709920233681
+  }
+]

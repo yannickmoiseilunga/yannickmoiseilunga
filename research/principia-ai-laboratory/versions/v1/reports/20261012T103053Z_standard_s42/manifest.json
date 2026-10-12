@@ -1,0 +1,298 @@
+{
+  "created_utc": "2026-10-12T10:30:53.461669+00:00",
+  "settings": {
+    "preset": "standard",
+    "seed": 42,
+    "config": {
+      "seeds": 6,
+      "train_n": 420,
+      "test_n": 600,
+      "quick": false,
+      "math_n": 500
+    },
+    "seconds": 19.493,
+    "synthetic": true,
+    "independent_seeds": 6
+  },
+  "n_observation_rows": 300,
+  "n_predictions": 39600,
+  "prediction_sample": "At most 200 deterministic examples per trial/seed/domain. Evaluation metrics use all test examples.",
+  "preregistration": [
+    {
+      "id": "H01",
+      "name": "No information: the blind engine cannot reliably exceed chance",
+      "a": [
+        "blind",
+        "linear",
+        "train"
+      ],
+      "reference": 0.5,
+      "direction": "abs_lt",
+      "threshold": 0.05,
+      "kind": "bound"
+    },
+    {
+      "id": "H02",
+      "name": "Better observation improves sensor-based judgement",
+      "a": [
+        "sensors_full",
+        "linear",
+        "train"
+      ],
+      "b": [
+        "sensors_weak",
+        "linear",
+        "train"
+      ],
+      "direction": "greater",
+      "threshold": 0.03
+    },
+    {
+      "id": "H03",
+      "name": "Composition allows parity relations inaccessible to linear separators",
+      "a": [
+        "parity_large",
+        "interactions",
+        "train"
+      ],
+      "b": [
+        "parity_large",
+        "linear",
+        "train"
+      ],
+      "direction": "greater",
+      "threshold": 0.1
+    },
+    {
+      "id": "H04",
+      "name": "A changed environment can disturb a successful disposition",
+      "a": [
+        "spurious",
+        "linear",
+        "train"
+      ],
+      "b": [
+        "spurious",
+        "linear",
+        "shift"
+      ],
+      "direction": "greater",
+      "threshold": 0.1
+    },
+    {
+      "id": "H05",
+      "name": "An inverted reward misaligns correction with truth",
+      "a": [
+        "alignment_clean",
+        "linear",
+        "train"
+      ],
+      "b": [
+        "alignment_inverted",
+        "linear",
+        "train"
+      ],
+      "direction": "greater",
+      "threshold": 0.25
+    },
+    {
+      "id": "H06",
+      "name": "Corrected labels outperform corrupted corrections",
+      "a": [
+        "alignment_clean",
+        "linear",
+        "train"
+      ],
+      "b": [
+        "alignment_noisy",
+        "linear",
+        "train"
+      ],
+      "direction": "greater",
+      "threshold": 0.012,
+      "metric": "brier_advantage"
+    },
+    {
+      "id": "H07",
+      "name": "An additional instrument can improve decisions",
+      "a": [
+        "active_tool",
+        "adaptive",
+        "test"
+      ],
+      "b": [
+        "active_tool",
+        "no_tool",
+        "test"
+      ],
+      "direction": "greater",
+      "threshold": 0.025
+    },
+    {
+      "id": "H08",
+      "name": "Independent reference memory can resolve otherwise hidden identities",
+      "a": [
+        "memory",
+        "lookup",
+        "test"
+      ],
+      "b": [
+        "memory",
+        "unassisted",
+        "test"
+      ],
+      "direction": "greater",
+      "threshold": 0.2
+    },
+    {
+      "id": "H09",
+      "name": "Process verification at larger search budgets can beat first attempt",
+      "a": [
+        "deliberation_16",
+        "process",
+        "test"
+      ],
+      "b": [
+        "deliberation_1",
+        "first",
+        "test"
+      ],
+      "direction": "greater",
+      "threshold": 0.05
+    },
+    {
+      "id": "H10",
+      "name": "Weak supervision may or may not elicit stronger learned structure",
+      "a": [
+        "weak_to_strong",
+        "pseudo",
+        "test"
+      ],
+      "b": [
+        "weak_to_strong",
+        "weak",
+        "test"
+      ],
+      "direction": "greater",
+      "threshold": 0.0,
+      "kind": "exploratory"
+    },
+    {
+      "id": "H11",
+      "name": "Selecting high-confidence predictions can reduce accepted error",
+      "a": [
+        "sensors_full",
+        "linear",
+        "train"
+      ],
+      "metric": "risk_gain",
+      "direction": "greater",
+      "threshold": 0.015,
+      "kind": "exploratory"
+    },
+    {
+      "id": "H12",
+      "name": "Feedback after acting can improve control over a one-shot decision",
+      "a": [
+        "control",
+        "closed_loop",
+        "test"
+      ],
+      "b": [
+        "control",
+        "open_loop",
+        "test"
+      ],
+      "direction": "greater",
+      "threshold": 0.04,
+      "kind": "exploratory"
+    }
+  ],
+  "corollary_map": {
+    "I. Magnitude versus understanding": [
+      "H03",
+      "parity_small",
+      "parity_large"
+    ],
+    "II. Invention via composition": [
+      "H03",
+      "parity_large"
+    ],
+    "III. Several senses": [
+      "H02",
+      "sensors_full",
+      "sensors_pair",
+      "sensors_weak"
+    ],
+    "IV. Memory and forgetfulness": [
+      "H08",
+      "memory"
+    ],
+    "V. Apparent versus actual understanding": [
+      "H01",
+      "H04",
+      "blind",
+      "spurious",
+      "apparent_equivalence"
+    ],
+    "VI. Uncertainty and false certainty": [
+      "H11",
+      "sensors_full"
+    ],
+    "VII. Propagation of internal error": [
+      "H05",
+      "H06",
+      "alignment_inverted",
+      "self_training"
+    ],
+    "VIII. The liberty of experiment": [
+      "H04",
+      "spurious"
+    ],
+    "Proposition I. Learning versus transient inference": [
+      "weak_to_strong",
+      "deliberation_16"
+    ],
+    "Proposition II. Composition": [
+      "H03",
+      "parity_large"
+    ],
+    "Proposition III. Direction of correction": [
+      "H05",
+      "H06"
+    ],
+    "Proposition IV. Indistinguishability": [
+      "H01",
+      "blind"
+    ],
+    "Proposition V. Changed conditions": [
+      "H04",
+      "spurious"
+    ],
+    "Proposition VI. Objective versus truth": [
+      "H05",
+      "alignment_inverted"
+    ],
+    "Proposition VII. Additional instruments": [
+      "H07",
+      "active_tool"
+    ],
+    "Proposition VIII. Deliberation": [
+      "H09",
+      "deliberation_16"
+    ],
+    "Proposition IX. Feedback and action": [
+      "H07",
+      "H12",
+      "active_tool",
+      "control"
+    ]
+  },
+  "result_limits": [
+    "Synthetic controlled worlds; cannot establish universal laws of all AI.",
+    "No frontier LLM reproduction; architectural analogy only.",
+    "Small seed bootstrap not a formal test of theory.",
+    "The known simulation generator supplies ground truth and Bayes ceilings.",
+    "No P values or causal claims beyond randomised synthetic interventions."
+  ]
+}

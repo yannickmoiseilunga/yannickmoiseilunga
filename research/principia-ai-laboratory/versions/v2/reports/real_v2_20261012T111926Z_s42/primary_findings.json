@@ -1,0 +1,110 @@
+[
+  {
+    "id": "R01",
+    "name": "Nonlinear architecture exceeds linear classifier",
+    "effect": -0.05594125712832807,
+    "minimum_effect": 0.04,
+    "dataset_count": 4,
+    "paired_seeds_per_dataset": {
+      "breast_cancer": 20,
+      "wine": 20,
+      "iris": 20,
+      "digits": 20
+    },
+    "cluster_ci95": [
+      -0.10727875841006701,
+      -0.004603755846589147
+    ],
+    "dataset_cluster_p_one_sided": 0.9797951489821349,
+    "dataset_effects": {
+      "breast_cancer": -0.06527777777777781,
+      "wine": -0.021739130434782605,
+      "iris": -0.04047619047619049,
+      "digits": -0.0962719298245614
+    },
+    "power_plan_seeds": 20,
+    "status": "opposite_direction",
+    "holm_adjusted_p": 0.9797951489821349
+  },
+  {
+    "id": "R02",
+    "name": "Clean labels exceed 20% corrupted labels",
+    "effect": 0.05537712033707458,
+    "minimum_effect": 0.04,
+    "dataset_count": 4,
+    "paired_seeds_per_dataset": {
+      "breast_cancer": 20,
+      "wine": 20,
+      "iris": 20,
+      "digits": 20
+    },
+    "cluster_ci95": [
+      0.00802412505722698,
+      0.10273011561692218
+    ],
+    "dataset_cluster_p_one_sided": 0.016883490325524657,
+    "dataset_effects": {
+      "breast_cancer": 0.05138888888888891,
+      "wine": 0.0956521739130435,
+      "iris": 0.023809523809523815,
+      "digits": 0.0506578947368421
+    },
+    "power_plan_seeds": 20,
+    "status": "not_confirmed",
+    "holm_adjusted_p": 0.06253801937443822
+  },
+  {
+    "id": "R03",
+    "name": "Full sensing exceeds 40% feature dropout",
+    "effect": 0.12626595928226364,
+    "minimum_effect": 0.04,
+    "dataset_count": 4,
+    "paired_seeds_per_dataset": {
+      "breast_cancer": 20,
+      "wine": 20,
+      "iris": 20,
+      "digits": 20
+    },
+    "cluster_ci95": [
+      0.021466615861044494,
+      0.23106530270348274
+    ],
+    "dataset_cluster_p_one_sided": 0.015634504843609554,
+    "dataset_effects": {
+      "breast_cancer": 0.08055555555555557,
+      "wine": 0.22391304347826085,
+      "iris": 0.10476190476190479,
+      "digits": 0.0958333333333333
+    },
+    "power_plan_seeds": 20,
+    "status": "not_confirmed",
+    "holm_adjusted_p": 0.06253801937443822
+  },
+  {
+    "id": "R04",
+    "name": "Matched-environment evaluation exceeds domain-shift evaluation",
+    "effect": 0.016569886607272016,
+    "minimum_effect": 0.04,
+    "dataset_count": 4,
+    "paired_seeds_per_dataset": {
+      "breast_cancer": 20,
+      "wine": 20,
+      "iris": 20,
+      "digits": 20
+    },
+    "cluster_ci95": [
+      -0.02066536335317383,
+      0.05380513656771786
+    ],
+    "dataset_cluster_p_one_sided": 0.12584444333321831,
+    "dataset_effects": {
+      "breast_cancer": 0.0321302816901409,
+      "wine": -0.006648129423660248,
+      "iris": 0.0,
+      "digits": 0.04079739416260742
+    },
+    "power_plan_seeds": 20,
+    "status": "effect_below_predeclared_threshold",
+    "holm_adjusted_p": 0.25168888666643663
+  }
+]

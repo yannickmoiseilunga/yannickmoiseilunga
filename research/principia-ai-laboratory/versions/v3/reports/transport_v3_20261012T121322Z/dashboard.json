@@ -1,0 +1,169 @@
+{
+  "type": "real_v3",
+  "summary": [
+    {
+      "regime": "new_datasets_known_arch",
+      "independent_dataset_clusters": 3,
+      "measurements": 720,
+      "probe_macro_mae": 0.06691545753457175,
+      "v2_macro_mae": 0.06691545753457175,
+      "itl_macro_mae": 0.05734215088677117,
+      "itl_gain_over_probe": 0.009573306647800579,
+      "itl_gain_vs_probe_ci95": [
+        -0.060323708551226304,
+        0.07947032184682747
+      ],
+      "decision": "not confirmed",
+      "by_dataset": [
+        {
+          "dataset": "anes96",
+          "n": 240,
+          "probe_mae": 0.053355896413239054,
+          "v2_mae": 0.053355896413239054,
+          "itl_mae": 0.06720027976186821,
+          "itl_gain_over_probe": -0.013844383348629155,
+          "itl_gain_over_v2": -0.013844383348629155
+        },
+        {
+          "dataset": "fair",
+          "n": 240,
+          "probe_mae": 0.09630119047619048,
+          "v2_mae": 0.09630119047619048,
+          "itl_mae": 0.05551471950726928,
+          "itl_gain_over_probe": 0.040786470968921205,
+          "itl_gain_over_v2": 0.040786470968921205
+        },
+        {
+          "dataset": "randhie",
+          "n": 240,
+          "probe_mae": 0.05108928571428571,
+          "v2_mae": 0.05108928571428571,
+          "itl_mae": 0.04931145339117603,
+          "itl_gain_over_probe": 0.0017778323231096849,
+          "itl_gain_over_v2": 0.0017778323231096849
+        }
+      ]
+    },
+    {
+      "regime": "new_arch_known_datasets",
+      "independent_dataset_clusters": 4,
+      "measurements": 960,
+      "probe_macro_mae": 0.07113274353475349,
+      "v2_macro_mae": 0.07113274353475349,
+      "itl_macro_mae": 0.06925546566691386,
+      "itl_gain_over_probe": 0.0018772778678396388,
+      "itl_gain_vs_probe_ci95": [
+        -0.013644410584472235,
+        0.01739896632015151
+      ],
+      "decision": "not confirmed",
+      "by_dataset": [
+        {
+          "dataset": "breast_cancer",
+          "n": 240,
+          "probe_mae": 0.0633484937402191,
+          "v2_mae": 0.0633484937402191,
+          "itl_mae": 0.05461504399917413,
+          "itl_gain_over_probe": 0.008733449741044973,
+          "itl_gain_over_v2": 0.008733449741044973
+        },
+        {
+          "dataset": "digits",
+          "n": 240,
+          "probe_mae": 0.05427412280701754,
+          "v2_mae": 0.05427412280701754,
+          "itl_mae": 0.06677968480882003,
+          "itl_gain_over_probe": -0.012505562001802493,
+          "itl_gain_over_v2": -0.012505562001802493
+        },
+        {
+          "dataset": "iris",
+          "n": 240,
+          "probe_mae": 0.10740450970951693,
+          "v2_mae": 0.10740450970951693,
+          "itl_mae": 0.10048796110468411,
+          "itl_gain_over_probe": 0.006916548604832817,
+          "itl_gain_over_v2": 0.006916548604832817
+        },
+        {
+          "dataset": "wine",
+          "n": 240,
+          "probe_mae": 0.059503847882260416,
+          "v2_mae": 0.059503847882260416,
+          "itl_mae": 0.05513917275497716,
+          "itl_gain_over_probe": 0.004364675127283259,
+          "itl_gain_over_v2": 0.004364675127283259
+        }
+      ]
+    },
+    {
+      "regime": "double_unseen",
+      "independent_dataset_clusters": 3,
+      "measurements": 720,
+      "probe_macro_mae": 0.061283603256375524,
+      "v2_macro_mae": 0.061283603256375524,
+      "itl_macro_mae": 0.05759283625824241,
+      "itl_gain_over_probe": 0.003690766998133125,
+      "itl_gain_vs_probe_ci95": [
+        -0.0792208710301993,
+        0.08660240502646556
+      ],
+      "decision": "not confirmed",
+      "by_dataset": [
+        {
+          "dataset": "anes96",
+          "n": 240,
+          "probe_mae": 0.03089842881674563,
+          "v2_mae": 0.03089842881674563,
+          "itl_mae": 0.03635818025870699,
+          "itl_gain_over_probe": -0.005459751441961359,
+          "itl_gain_over_v2": -0.005459751441961359
+        },
+        {
+          "dataset": "fair",
+          "n": 240,
+          "probe_mae": 0.09411190476190476,
+          "v2_mae": 0.09411190476190476,
+          "itl_mae": 0.053423867366173904,
+          "itl_gain_over_probe": 0.040688037395730854,
+          "itl_gain_over_v2": 0.040688037395730854
+        },
+        {
+          "dataset": "randhie",
+          "n": 240,
+          "probe_mae": 0.05884047619047619,
+          "v2_mae": 0.05884047619047619,
+          "itl_mae": 0.08299646114984631,
+          "itl_gain_over_probe": -0.024155984959370116,
+          "itl_gain_over_v2": -0.024155984959370116
+        }
+      ]
+    }
+  ],
+  "interval_coverage": [
+    {
+      "regime": "new_datasets_known_arch",
+      "empirical_coverage": 1.0
+    },
+    {
+      "regime": "new_arch_known_datasets",
+      "empirical_coverage": 0.9791666666666666
+    },
+    {
+      "regime": "double_unseen",
+      "empirical_coverage": 0.9986111111111111
+    }
+  ],
+  "impossibility": {
+    "equal_visible_train_and_unlabeled_test": true,
+    "world_one_accuracy": 0.9925,
+    "world_two_accuracy": 0.0075,
+    "mean_of_accuracies": 0.5,
+    "minimax_absolute_error_lower_bound": 0.49250000000000005,
+    "logical_conclusion": "An identical forecast must be wrong by at least this amount in at least one world; changing P(Y|X) is not identifiable from unlabeled X."
+  },
+  "v2_weight": 0.0,
+  "seeds": 20,
+  "source_csv_sha256": "90d2c41647d140292d02adc54ae740ceab92b205050e7235bbbba8508aa1e038",
+  "limitations": "EXPLORATORY. Candidate failed the predeclared cross-source confirmation criterion; no universal law is established."
+}
