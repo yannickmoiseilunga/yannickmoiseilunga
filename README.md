@@ -8,3 +8,7 @@
 yannickmoiseilunga/yannickmoiseilunga is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+
+## Featured research project
+
+**[Principia AI Laboratory — V1 to V3](research/principia-ai-laboratory/README.md)** — An experimental investigation of cross-domain and cross-architecture AI performance prediction, with transparent negative results, technical methods, and interview-oriented explanations.
