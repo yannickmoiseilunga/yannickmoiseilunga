@@ -32,11 +32,12 @@ V3 confirmation demanded >=0.010 absolute MAE gain **and** a positive lower boun
 - [Reproducibility and source-code publication status](docs/REPRODUCE.md)
 - [Mathematical derivation](versions/v3/V3_MATHEMATICAL_DERIVATION.md)
 - [Future independent replication protocol](versions/v3/NEXT_REPLICATION_PLAN.md)
+- [Published raw V2 development records (CSV)](versions/v3/frozen_development_v2.csv) and [evidence inventory](docs/RAW_EVIDENCE_README.md)
 - [V1 experimental report](versions/v1/reports/20261012T103053Z_standard_s42/REPORT.md)
 - [V2 empirical report](versions/v2/reports/real_v2_20261012T111926Z_s42/REPORT.md)
 - [V3 empirical report](versions/v3/reports/transport_v3_20261012T121322Z/REPORT.md)
 
 ### Publication scope
-This initial GitHub publication contains source methodology, protocol descriptions and result summaries. **The full executable source trees and raw prediction CSV/JSON evidence are staged in a separate local publication bundle and require the repository sync step**; no such files should be assumed to exist on GitHub until uploaded and verified. Tests in that package have passed (11 V1, 20 V2, 30 V3), but that is not third-party scientific validation.
+This initial GitHub publication contains source methodology, protocol descriptions, result summaries, and the frozen V2 development observations (1,920 records). **The full executable source trees and raw prediction CSV/JSON evidence are staged in a separate local publication bundle and require the repository sync step**; no such files should be assumed to exist on GitHub until uploaded and verified. Tests in that package have passed (11 V1, 20 V2, 30 V3), but that is not third-party scientific validation.
 
 The work was developed iteratively with AI assistance. It does not claim peer review, architecture-independent emergence, consciousness or a universal intelligence theorem.
